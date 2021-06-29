@@ -1,9 +1,8 @@
 # frozen_string_literal: true
 
-# caesar_cipher demo
-
 def caesar_cipher(string, number)
   result = ''
+
   string.each_char do |letter|
     op = letter.ord < 91 ? 65 : 97
     if letter.ord.between?(65, 90) || letter.ord.between?(97, 122)
@@ -15,5 +14,3 @@ def caesar_cipher(string, number)
   end
   result
 end
-
-p caesar_cipher('What a string!', 5)
